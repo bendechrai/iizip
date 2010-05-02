@@ -1,0 +1,27 @@
+iizip
+~~~~~
+
+iizip is a storage application and service to store and sync files online and between computers.
+
+INSTALL
+~~~~~~~
+
+This software is dual-licensed under the Mozilla Public License 1.1 (see file MPL) and the GNU General Public License 2.0 (see file GPL).
+
+USAGE
+~~~~~
+
+Until the workflow is automated, you'll have to follow these steps when files change:
+
+1. run iizip-update
+2. run iizip-send
+
+If merge clashes occur in these steps, also:
+
+3. run iizip-detectclashes
+4. run iizip-send
+
+LICENSE
+~~~~~~~
+
+See LICENSE.

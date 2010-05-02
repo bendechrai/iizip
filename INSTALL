@@ -1,0 +1,40 @@
+Installing iizip
+~~~~~~~~~~~~~~~~
+
+iizip is a collection of scripts that update and manage conflicts in a local checkout of a git repository. One day it will be so much more than this.
+
+Pre-requisites
+~~~~~~~~~~~~~~
+
+iizip requires git and currently assumes it is running in a Linux environment.
+
+Single user install
+~~~~~~~~~~~~~~~~~~~
+
+mkdir ~/bin/
+cp ./bin/iizip-* ~/bin/
+chmod 755 ~/bin/iizip-*
+echo 'export PATH="$PATH:~/bin/"' >> ~/.bashrc
+
+Multi-user install
+~~~~~~~~~~~~~~~~~~
+
+# iizip-init is hard coded to one file repo, will have to change that before system-wide installation is possible.
+#sudo mkdir /opt/iizip/bin
+#sudo cp ./bin/iizip-* /opt/iizip/bin/
+#sudo chmod 755 /opt/iizip/bin/iizip-*
+#sudo chown -R root.root /opt/iizip
+#sudo echo 'export PATH="$PATH:~/bin/"' >> /etc/bash.bashrc
+
+First run
+~~~~~~~~~
+
+Before initialising iizip, you will need to create a new repository on a git server - github.com for example (although this will be publicly available unless you have a paid account).
+
+To initialise iizip in your environment, edit the 'iizip-init' script and alter the github URL to match the new reposity. Save the changes and run the file to:
+
+1. create the ~/iizip/ directory for your files
+2. create the ~/.iizip/ directory for meta information
+3. check out the repository
+
+Linux is a trademark of Linus Torvalds.
