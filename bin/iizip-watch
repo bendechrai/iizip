@@ -49,6 +49,8 @@ do
 
 	iizip-update
 	iizip-send
+	iizip-detectclashes
+	iizip-send
 
 done
 
