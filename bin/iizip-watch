@@ -36,5 +36,20 @@
 ###########################################################################
 
 pushd ~/iizip/ >> /dev/null
-git --git-dir ~/.iizip/ --work-tree ./ pull git@github.com:bendechrau/filerepo.git
+
+CURPATH=`pwd`
+
+inotifywait -mr --format '%w %f %e' -e modify -e moved_to -e moved_from -e create -e delete ~/iizip/ | while read dir file change
+do
+	FILECHANGE=${dir}${file}
+	# convert absolute path to relative
+	FILECHANGEREL=`echo "$FILECHANGE" | sed 's_'$CURPATH'/__'`
+
+	iizip-log "iizip-watch: Change ${change} detected on $FILECHANGE"
+
+	iizip-update
+	iizip-send
+
+done
+
 popd >> /dev/null

@@ -39,6 +39,6 @@ mkdir -p ~/.iizip
 mkdir -p ~/iizip
 pushd ~/iizip/ >> /dev/null
 git --git-dir ~/.iizip/ --work-tree ~/iizip init
-git --git-dir ~/.iizip/ --work-tree ~/iizip remote add origin git@github.com:dechrau/iizip-dechrau.git
+git --git-dir ~/.iizip/ --work-tree ~/iizip remote add origin git@github.com:bendechrau/filerepo.git
 git --git-dir ~/.iizip/ --work-tree ~/iizip pull origin master
 popd >> /dev/null

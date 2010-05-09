@@ -35,6 +35,5 @@
 #
 ###########################################################################
 
-pushd ~/iizip/ >> /dev/null
-git --git-dir ~/.iizip/ --work-tree ./ pull git@github.com:bendechrau/filerepo.git
-popd >> /dev/null
+touch ~/.iizip.log
+echo `date +"%b %d %H:%M:%S"` `hostname` $1 >> ~/.iizip.log
